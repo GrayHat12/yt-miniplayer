@@ -1,0 +1,128 @@
+body {
+    background-color: white;
+    color: #030303;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+body.dark {
+    background-color: #222121;
+    color: #ffffff;
+}
+
+.dark-mode {
+    color: #030303;
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    border-radius: 50px;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+
+body.dark .dark-mode {
+    color: white;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+p {
+    cursor: default;
+}
+
+input {
+    background-color: inherit;
+    color: inherit;
+}
+
+body.dark input {
+    border-color: white;
+}
+
+.container {
+    width: fit-content;
+    cursor: default;
+}
+
+#master_div {
+    border: 1px solid;
+    outline: none;
+    cursor: text;
+    display: flex;
+    width: fit-content;
+    max-width: 500px;
+    padding: 1px;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-flow: wrap;
+}
+
+#master_div:focus {
+    outline: none;
+}
+
+#keywords {
+    display: contents;
+}
+
+.keyword {
+    box-shadow: 0 2px 0 #f3e6e8;
+    background-color: #f3e6e8;
+    background-image: linear-gradient(315deg, #f3e6e8 0%, #d5d0e5 74%);
+    color: inherit;
+    box-sizing: border-box;
+    align-items: center;
+    padding-right: 4px;
+    padding-left: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 9999px;
+    white-space: nowrap;
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 13px;
+    cursor: default;
+    justify-content: space-between;
+
+    border: 1px solid #030303;;
+    display: inline-flex;
+    flex-grow: 1;
+    margin: 2px;
+}
+
+body.dark .keyword {
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    box-shadow: 0 2px 0 #485461;
+    color: white;
+
+    border: 1px solid white;
+}
+
+.keyword img {
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 16px;
+}
+
+#input {
+    width: auto;
+    height: inherit;
+    padding: inherit;
+}
+
+#keyword_input {
+    height: 20px;
+}
+
+#keyword_input,
+#keyword_input:focus,
+#keyword_input:focus-visible {
+    border: none;
+    outline: none;
+}
+
+#update {
+    margin-top: 20px;
+    width: fit-content;
+}
