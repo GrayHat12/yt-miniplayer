@@ -10,7 +10,7 @@
 
 #### Visit [Homepage](https://github.com/GrayHat12/yt-miniplayer)
 
-#### Available on [Chrome Store](<pending>)
+#### Available on [Chrome Store](https://chrome.google.com/webstore/detail/youtube-miniplayer/elhgajfahdnnkehiiacodmholaijcdcl)
 
 ## Getting Started
 
