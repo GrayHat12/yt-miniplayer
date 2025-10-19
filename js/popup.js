@@ -1,5 +1,7 @@
 const ENABLED_TOOGLE = document.getElementById("enabled");
 const DARK_MODE = document.getElementById("dark-mode");
+const UpdateText = document.getElementById("update-text");
+
 let ENABLED = true;
 let DARK_MODE_ENABLED = true;
 
@@ -70,3 +72,19 @@ chrome.action.onClicked.addListener((tab) => {
 });
 
 fetchState();
+
+async function updateText() {
+  let responses = await Promise.all([
+    fetch("https://raw.githubusercontent.com/GrayHat12/no-spoilers/refs/heads/main/updates/GENERAL.md"),
+    fetch("https://raw.githubusercontent.com/GrayHat12/no-spoilers/refs/heads/main/updates/YTMiniplayer.md"),
+  ]);
+
+  let markdownCombined = "";
+  for (let response of responses) {
+    if (response.status != 200) continue;
+    markdownCombined += await response.text();
+  }
+  UpdateText.innerHTML = DOMPurify.sanitize(marked.parse(markdownCombined));
+}
+
+updateText().then(console.log).catch(console.error);

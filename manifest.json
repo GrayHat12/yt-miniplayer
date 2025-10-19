@@ -7,7 +7,7 @@
     "default_title": "Youtube Miniplayer",
     "default_popup": "./html/popup.html"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "content_scripts": [
     {
       "matches": [
@@ -23,6 +23,11 @@
   },
   "permissions": [
     "storage"
+  ],
+  "host_permissions": [
+    "https://raw.githubusercontent.com/GrayHat12/no-spoilers/refs/heads/master/README.md",
+    "https://raw.githubusercontent.com/GrayHat12/no-spoilers/refs/heads/main/updates/GENERAL.md",
+    "https://raw.githubusercontent.com/GrayHat12/no-spoilers/refs/heads/main/updates/YTMiniplayer.md"
   ],
   "icons": {
     "16": "assets/icon16.png",
